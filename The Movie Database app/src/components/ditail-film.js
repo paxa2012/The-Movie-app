@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 let data = [];
 class DitailFilm extends Component {
-    componentDidMount() {
-        const fetch = (url) =>{
+   
+        fetch(url) {
 
             fetch(url)
                 .then(res => {
@@ -16,7 +16,7 @@ class DitailFilm extends Component {
 
 
         }
-    }
+    
 
     goBack() {
         window.history.go(-1);
