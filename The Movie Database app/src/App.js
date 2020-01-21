@@ -19,8 +19,6 @@ class App extends Component {
   componentDidMount() {
     this.props.fethCatigory("https://api.themoviedb.org/3/genre/movie/list?api_key=38b0b64e1c4ca9ee5b886b99a6aa31c8&language=ru-RU");
     this.props.fetchMovie("https://api.themoviedb.org/3/list/1?api_key=38b0b64e1c4ca9ee5b886b99a6aa31c8&language=ru-RU");
-    /*<img src={`http://image.tmdb.org/t/p/original${pop.poster_path}`} />
-                <p>{pop.overview}</p>*/
   }
   render() {
     return (

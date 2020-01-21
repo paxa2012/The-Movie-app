@@ -24,9 +24,7 @@ class Films extends Component {
                                                 <img src={`http://image.tmdb.org/t/p/original${film.poster_path}`} alt={film.title} />
                                             </div>
                                             <div className="box-film__text">
-                                                <h2>{film.title}</h2>
-                                                
-                                                
+                                                <h2>{film.title}</h2>  
                                             </div>
                                         </div>
                                     </Link>

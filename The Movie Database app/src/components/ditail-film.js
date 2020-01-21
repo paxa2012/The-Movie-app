@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
+
 let data = [];
 class DitailFilm extends Component {
-   
-        fetch(url) {
+    fetch(url) {
+        fetch(url)
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(res.statusText)
+                }
+                return res
+            })
+            .then(res => res.json())
+            .then(res => data = res.results)
+    }
 
-            fetch(url)
-                .then(res => {
-                    if (!res.ok) {
-                        throw new Error(res.statusText)
-                    }
-                    return res
-                })
-                .then(res => res.json())
-                .then(res => data = res.results)
-
-
-        }
-    
 
     goBack() {
         window.history.go(-1);
@@ -25,7 +22,6 @@ class DitailFilm extends Component {
         let id = this.props.match.params.id;
         id = parseInt(id);
         let ditalfilm = this.props.movie.movie;
-        console.log(data)
         return (
             <div className="container">
                 {
